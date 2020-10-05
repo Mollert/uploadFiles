@@ -1,0 +1,45 @@
+
+	<div class="starter">
+
+		<div class="topLine"><h2>Displaying those uploaded files.</h2></div>
+
+		<form id="singlesForm" action="/RemoveSingles" method="POST">
+
+			<div class="displayBoth">
+				<div class="displayTitle"><h3>All the single uploads are shown here.</h3></div>
+				<div id="singlesHere" class="windows flexRow flexCenter">
+					{{#each singles}}
+						<img id={{this.id}} class="singleWindow aSingle" style="margin: 0.6rem; border: none;" src={{this.source}} alt="{{this.alternative}}">
+					{{/each}}
+				</div>
+			</div>
+
+			<div class="displayBoth">
+				<div class="displayTitle"><h3>All the multiple uploads are shown here.</h3></div>
+				<div id="multiplesHere" class="windows flexRow flexCenter">
+					{{#each multiples}}
+						<img id={{this.id}} class="singleWindow aMultiple" style="margin: 0.6rem; border: none;" src={{this.source}} alt="{{this.alternative}}">
+					{{/each}}
+				</div>
+			</div>
+
+			<div class="removeNote"><h4>{{removal1}}</h4></div>
+			<div class="removeNote"><h4>{{removal2}}</h4></div>
+
+			<input type="hidden" id="fileName" name="fileName" value="File Value">
+			<input type="hidden" id="folderName" name="folderName" value="Folder Value">
+
+			<div id="singleButtonsRemove" class="flexRow flexLeft">
+				<button type="submit" id="removeSingleButton" class="removeButton">Remove One</button>
+				<button type="submit" formaction="/RemoveMultiples" id="removeAllButton" class="removeButton"></button>
+			</div>
+
+		</form>
+
+		<div class="firstPage"><h3>Take me to the <a href="/Upload">upload</a> page.</h3></div>
+
+		<div class="anotherPage"><h3>Take me <a href="/">home</a>.</h3></div>
+
+	</div>
+
+	<script src="/javascript/remove.js"></script>

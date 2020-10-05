@@ -1,0 +1,21 @@
+{
+  "name": "uploadimages",
+  "version": "1.0.0",
+  "description": "Demo for uploading a file or files.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": "12.16.3"
+  },
+  "author": "David Mollert",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
+    "multer": "^1.4.2",
+    "path": "^0.12.7"
+  }
+}

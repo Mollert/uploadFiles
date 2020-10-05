@@ -1,0 +1,247 @@
+
+html, body { margin: 0; padding: 0; }
+
+h1 { margin: 0; font-size: 2.6rem; }
+h2 { margin: 0; font-size: 2.2rem; }
+h3 { margin: 0; font-size: 1.8rem; }
+h4 { margin: 0; font-size: 1.4rem; }
+
+.starter {
+	width: 92vw;
+	height: auto;
+	min-height: 100vh;
+	margin-left: 4vw;
+	background-color: lightblue;
+}
+
+
+/*----------Main page----------*/
+
+
+.topLine {
+	padding: 3rem 4rem 1rem 4rem;
+	text-align: center;
+}
+
+.bottomLine {
+	margin: 0 4rem;
+	text-align: center;	
+}
+
+.firstPage {
+	margin: 4rem 8rem 2rem 8rem;
+}
+
+.anotherPage {
+	padding: 0 8rem 4rem 8rem;
+}
+
+
+/*----------Upload page----------*/
+
+
+.formUploads {
+	margin: 2rem 4rem 4rem 4rem;
+}
+
+.locateInput {
+	position: relative;
+	width: 100%;
+	height: 5rem;
+}
+
+input[type="file"] {
+	position: absolute;
+	top: 0.6rem;
+	font-size: 1.4rem;
+}
+
+#singleInput {
+	left: 4.5rem;	
+}
+
+#multiInput {
+	left: 4.9rem;
+}
+
+.inputButton {
+	position: absolute;
+	padding: 0.8rem 0.8rem;
+	cursor: pointer;
+	border-radius: 0.6rem;
+	background-color: darkseagreen;
+	font-size: 1.4rem;
+	font-weight: bold;
+}
+
+.uploadButton {
+	padding: 0.8rem 0.8rem;
+	border: none;	
+	border-radius: 0.6rem;
+	background-color: darkseagreen;
+	font-size: 1.4rem;
+	font-weight: bold;
+	font-family: serif;
+}
+
+
+/*----------Display page----------*/
+
+
+.displayBoth {
+	margin: 2rem 4rem 2rem 4rem;
+}
+
+.displayTitle {
+	text-align: center;
+}
+
+.flexRow {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.flexCenter {
+	justify-content: center;	
+}
+
+.flexLeft {
+	justify-content: flex-start;
+}
+
+.windows {
+	width: 100%;
+	height: 100%;
+}
+
+.singleWindow {
+	width: 6rem;
+	height: 6rem;
+}
+
+.removeNote {
+	margin: 0 4rem 0 4rem;
+}
+
+#removeSingleButton {
+	margin: 2rem 0 0 4rem;
+}
+
+#removeAllButton {
+	margin: 2rem 4rem 0 4rem;
+} 
+.removeButton {
+	width: 10rem;
+	height: 3.2rem;
+	border: none;	
+	border-radius: 0.6rem;
+	background-color: darkorange;
+	font-size: 1.4rem;
+	font-weight: bold;
+	font-family: serif;
+}
+
+#removeAllButton::before {
+	content: "Remove All";
+}
+
+#removeAllButton:hover::before {
+	content: "For Sure?";
+}
+
+#removeAllButton:hover {
+	background-color: red;
+	color: white;
+}
+
+
+/*----------Due to screen size----------*/
+
+
+@media screen and (max-width: 760px) {
+	.topLine {
+		padding: 3rem 2rem 1rem 2rem;
+	}
+	.bottomLine {
+		margin: 0 2rem;
+	}
+	.firstPage {
+		margin: 4rem 4rem 2rem 4rem;
+	}
+	.anotherPage {
+		padding: 0 4rem 4rem 4rem;
+	}
+	.displayBoth {
+		margin: 2rem 2rem 2rem 2rem;
+	}
+}
+
+@media screen and (max-width: 550px) {	
+	h1 { margin: 0; font-size: 2.4rem; }
+	h2 { margin: 0; font-size: 2.0rem; }
+	h3 { margin: 0; font-size: 1.6rem; }
+	h4 { margin: 0; font-size: 1.2rem; }
+
+	.formUploads {
+		margin: 2rem 2rem 4rem 2rem;
+	}
+	.locateInput {
+		height: 4rem;
+	}
+	input[type="file"] {
+		top: 0.5rem;
+		font-size: 1.1rem;
+	}
+	#singleInput {
+		left: 4.1rem;	
+	}
+	#multiInput {
+		left: 4.5rem;
+	}
+	.inputButton {
+		padding: 0.6rem 0.6rem;
+		font-size: 1.2rem;
+	}
+	.uploadButton {
+		padding: 0.6rem 0.6rem;
+		font-size: 1.2rem;
+	}
+	.singleWindow {
+		width: 5rem;
+		height: 5rem;
+	}
+	.removeNote {
+		margin: 0 2rem 0 2rem;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.formUploads {
+		margin: 2rem 1rem 4rem 1rem;
+	}
+	input[type="file"] {
+		top: 1.0rem;
+	}
+	#singleInput {
+		left: 1.2rem;	
+	}
+	#multiInput {
+		left: 0.7rem;
+	}
+	.inputButton {
+		width: 7rem;
+		height: 2.4rem;
+		font-size: 1.2rem;
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 340px) {
+	#removeSingleButton {
+		margin: 2rem 0 0 3rem;
+	}
+	#removeAllButton {
+		margin: 2rem 3rem 0 3rem;
+	}
+}
