@@ -3,7 +3,8 @@ let removeFile = "";
 let removeFolder = "";
 let oppositeGroup = "";
 
-const getSingle = (event, group, fileID, folderID) => {
+//const getSingle = (event, group, fileID, folderID) => {
+const getSingle = (event, group) => {
 // If main div was selected, do not process or display selection.
 	if (event.target.id === "singlesHere") {
 		return
@@ -28,7 +29,7 @@ const getSingle = (event, group, fileID, folderID) => {
 		document.getElementById(event.target.id).style.border = "0.4rem solid red";
 	}
 // Strip image down to original name.
-	let pickedFile = event.path[0].currentSrc;
+	let pickedFile = event.target.currentSrc;
 	let lastCharFile= pickedFile.lastIndexOf("/");
 	removeFile = pickedFile.slice(lastCharFile + 1);
 // Separate folder name from file string.
@@ -36,8 +37,8 @@ const getSingle = (event, group, fileID, folderID) => {
 	let lastCharFolder = pickedFolder.lastIndexOf("/");
 	removeFolder = pickedFolder.slice(lastCharFolder + 1);
 // Overwrite input variables in DOM before they are wisked away to the server.
-	document.getElementById(fileID).value = removeFile;
-	document.getElementById(folderID).value = removeFolder;
+	document.getElementById("fileName").value = removeFile;
+	document.getElementById("folderName").value = removeFolder;
 
 	removeFile = "";
 	removeFolder = "";
@@ -55,8 +56,8 @@ document.getElementById("singlesHere").addEventListener("click", (evt) => {
 		}
 	}
 // Use the event to identify the image that was picked.
-	getSingle(evt, ".aSingle", "fileName", "folderName");
-});
+	getSingle(evt, ".aSingle");
+}, false);
 
 document.getElementById("multiplesHere").addEventListener("click", (evt) => {
 	oppositeGroup = "";
@@ -69,5 +70,5 @@ document.getElementById("multiplesHere").addEventListener("click", (evt) => {
 		}
 	}
 
-	getSingle(evt, ".aMultiple", "fileName", "folderName");
-});
+	getSingle(evt, ".aMultiple");
+}, false);

@@ -44,41 +44,40 @@ h4 { margin: 0; font-size: 1.4rem; }
 	margin: 2rem 4rem 4rem 4rem;
 }
 
-.locateInput {
-	position: relative;
-	width: 100%;
-	height: 5rem;
-}
-
 input[type="file"] {
-	position: absolute;
-	top: 0.6rem;
 	font-size: 1.4rem;
 }
 
-#singleInput {
-	left: 4.5rem;	
-}
-
-#multiInput {
-	left: 4.9rem;
-}
-
-.inputButton {
-	position: absolute;
-	padding: 0.8rem 0.8rem;
-	cursor: pointer;
-	border-radius: 0.6rem;
-	background-color: darkseagreen;
-	font-size: 1.4rem;
-	font-weight: bold;
-}
-
-.uploadButton {
+input[type="file"]::-webkit-file-upload-button {
 	padding: 0.8rem 0.8rem;
 	border: none;	
 	border-radius: 0.6rem;
 	background-color: darkseagreen;
+	font-size: 1.4rem;	
+	font-weight: bold;
+	font-family: serif;
+	-webkit-appearance: none;	
+}
+
+input[type="file"]::file-selector-button {
+	padding: 0.8rem 0.8rem;
+	border: none;	
+	border-radius: 0.6rem;
+	background-color: darkseagreen;
+	font-size: 1.4rem;	
+	font-weight: bold;
+	font-family: serif;
+	-webkit-appearance: none;	
+}
+
+.uploadButton {
+	margin-top: 1rem;
+	display: block;
+	padding: 0.8rem 0.8rem;
+	border: none;	
+	border-radius: 0.6rem;
+	background-color: darkseagreen;
+	cursor: pointer;
 	font-size: 1.4rem;
 	font-weight: bold;
 	font-family: serif;
@@ -186,22 +185,16 @@ input[type="file"] {
 	.formUploads {
 		margin: 2rem 2rem 4rem 2rem;
 	}
-	.locateInput {
-		height: 4rem;
-	}
 	input[type="file"] {
-		top: 0.5rem;
 		font-size: 1.1rem;
 	}
-	#singleInput {
-		left: 4.1rem;	
+	input[type="file"]::-webkit-file-upload-button {
+	padding: 0.6rem 0.6rem;
+	font-size: 1.2rem;	
 	}
-	#multiInput {
-		left: 4.5rem;
-	}
-	.inputButton {
-		padding: 0.6rem 0.6rem;
-		font-size: 1.2rem;
+	input[type="file"]::file-selector-button {
+	padding: 0.6rem 0.6rem;
+	font-size: 1.2rem;	
 	}
 	.uploadButton {
 		padding: 0.6rem 0.6rem;
@@ -219,21 +212,6 @@ input[type="file"] {
 @media screen and (max-width: 400px) {
 	.formUploads {
 		margin: 2rem 1rem 4rem 1rem;
-	}
-	input[type="file"] {
-		top: 1.0rem;
-	}
-	#singleInput {
-		left: 1.2rem;	
-	}
-	#multiInput {
-		left: 0.7rem;
-	}
-	.inputButton {
-		width: 7rem;
-		height: 2.4rem;
-		font-size: 1.2rem;
-		text-align: center;
 	}
 }
 

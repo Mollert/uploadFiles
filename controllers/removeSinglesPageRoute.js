@@ -12,9 +12,11 @@ router.post("/", (req, res) => {
 	let remove = "";
 // Add up full file name to be removed.
 	if (req.body.folderName == "single") {
-		remove = "./uploadedFiles/single/" + req.body.fileName;
+//		remove = "./uploadedFiles/single/" + req.body.fileName;
+		remove = "/root/process/uploadedFiles/single/" + req.body.fileName;
 	} else {
-		remove = "./uploadedFiles/multiple/" + req.body.fileName;
+//		remove = "./uploadedFiles/multiple/" + req.body.fileName;
+		remove = "/root/process/uploadedFiles/multiple/" + req.body.fileName;
 	}
 // Say goodbye.
 	fs.unlinkSync(remove);

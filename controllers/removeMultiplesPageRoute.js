@@ -16,12 +16,14 @@ router.post("/", (req, res) => {
 	if (req.body.folderName === "single") {
 		singles.forEach(file => {
 			link = (file.source).slice(2);
-			fs.unlinkSync("./uploadedFiles/" + link);
+//			fs.unlinkSync("./uploadedFiles/" + link);			
+			fs.unlinkSync("/root/process/uploadedFiles/" + link);
 		})
 	} else {
 		multiples.forEach(file => {
 			link = (file.source).slice(2);
-			fs.unlinkSync("./uploadedFiles/" + link);
+//			fs.unlinkSync("./uploadedFiles/" + link);			
+			fs.unlinkSync("/root/process/uploadedFiles/" + link);
 		})
 	}
 // Depending on which folder was emptied, need to reload array.

@@ -4,27 +4,15 @@
 		<div class="topLine"><h2>Pick the files to upload.</h2></div>
 
 		<form class="formUploads" action="/Upload/File" method="POST" enctype="multipart/form-data">
-
-			<div class="locateInput">
 				<input type="file" id="singleInput" name="singleInput" accept=".jpeg, .jpg, .png, .gif">
-				<label class="inputButton" for="singleInput">Choose a single file</label>
-  			</div>
 
-			<div id="locateSingleButton">
 				<button type="submit" id="singleButton" class="uploadButton">Upload a single file</button>
-  			</div>
 		</form>
 
 		<form class="formUploads" action="/Upload/Files" method="POST" enctype="multipart/form-data">
-
-			<div class="locateInput">
 				<input type="file" id="multiInput" name="multiInput" accept=".jpeg, .jpg, .png, .gif" multiple>
-				<label class="inputButton" for="multiInput">Choose multiple files</label>
-  			</div>
 
-			<div id="locateMultiButton">	
-				<button type="submit" id="multiButton" class="uploadButton">Upload all files</button>	
-  			</div>
+				<button type="submit" id="multiButton" class="uploadButton">Upload all files</button>
 		</form>
 
 		<div class="firstPage"><h3>Take me to the <a href="/DisplayFiles">display</a> page.</h3></div>
